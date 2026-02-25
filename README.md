@@ -1,37 +1,37 @@
-# Azure Landing Zone for a SME
+# Azure Landing Zone für ein KMU
 
-## Project Overview
+## Projektübersicht
 
-This project demonstrates the design and implementation of a secure and scalable Azure Landing Zone tailored for a small-to-medium enterprise (SME).
+Dieses Projekt zeigt die Konzeption und Umsetzung einer sicheren und skalierbaren **Azure Landing Zone**, die speziell auf die Anforderungen eines **kleinen bis mittelständischen Unternehmens (KMU)** zugeschnitten ist.
 
-The goal is to establish a structured cloud foundation including governance, networking, security, monitoring and cost control.
-
----
-
-## Architecture Goals
-
-- Clear resource organization
-- Secure networking design
-- Role-Based Access Control (RBAC)
-- Centralized monitoring
-- Cost transparency
-- Azure best practice alignment
+Ziel ist es, ein strukturiertes Cloud-Fundament aufzubauen – inklusive **Governance**, **Netzwerk**, **Sicherheit**, **Monitoring** und **Kostenkontrolle**.
 
 ---
 
-## Components
+## Architekturziele
 
-- Resource Groups
-- Virtual Network & Subnets
-- Network Security Groups
+- Klare Organisation von Ressourcen
+- Sichere Netzwerkarchitektur
+- Rollenbasierte Zugriffskontrolle (RBAC)
+- Zentrales Monitoring
+- Kostentransparenz
+- Ausrichtung an Azure Best Practices
+
+---
+
+## Komponenten
+
+- Ressourcengruppen
+- Virtuelles Netzwerk (VNet) & Subnetze
+- Netzwerksicherheitsgruppen (NSGs)
 - Azure Key Vault
-- Storage Account (RBAC secured)
+- Storage Account (über RBAC abgesichert)
 - Log Analytics Workspace
-- Budget & Cost Alerts
+- Budget & Kostenwarnungen (Cost Alerts)
 
 ---
 
-## Technologies
+## Technologien
 
 - Microsoft Azure
 - Azure Monitor
