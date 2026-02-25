@@ -2,7 +2,7 @@
 
 ## Zielarchitektur (MVP – Minimal Viable Platform)
 
-Subscription: kmu-prod (Im Rahmen dieses Projekts wird die Subscription „kmu-prod“ konzeptionell simuliert.
+Subscription: azure-landing-zone-kmu (Im Rahmen dieses Projekts wird die Subscription „kmu-prod“ konzeptionell simuliert.
 Die technische Umsetzung erfolgt innerhalb einer bestehenden Azure Subscription.)
 
 - **DEV** (Entwicklung)

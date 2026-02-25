@@ -6,7 +6,7 @@ Eine konsistente Namenskonvention ist essenziell für:
 
 - Übersichtlichkeit innerhalb der Azure-Umgebung
 - Skalierbarkeit der Infrastruktur
-- Automatisierung und Infrastructure-as-Code
+- Automatisierung und Infrastructure-as-a-Code
 - einfache Zuordnung von Ressourcen zu Projekten und Umgebungen
 - professionelle Betriebsführung
 
@@ -16,15 +16,17 @@ Die Benennung folgt einem strukturierten Schema, das Organisation, Umgebung und 
 
 ## Allgemeines Benennungsschema
 
+Ressourcengruppe:
+<rg>-<organisation>-<umgebung>-<scope>
+
+Beispiel:
+rg-kmu-prod-networking
+
+Ressourcen
 <ressourcentyp>-<organisation>-<umgebung>-<region>-<laufende-nummer>
 
 Beispiel:
-
-rg-kmu-prod-we-001  
-vnet-kmu-prod-we-001  
-nsg-app-kmu-prod-we-001  
-kv-kmu-prod-we-001  
-law-kmu-prod-we-001  
+vnet-kmu-prod-gwc-001
 
 ---
 
@@ -60,9 +62,10 @@ Im Rahmen dieses Projekts wird primär die Umgebung „prod“ simuliert.
 
 ---
 
-### Region
+### Regionen
 
-we = westeurope
+weu = West Europe
+gwc = Germany West Central
 
 ---
 
