@@ -5,18 +5,37 @@
 Subscription: kmu-prod (Im Rahmen dieses Projekts wird die Subscription „kmu-prod“ konzeptionell simuliert.
 Die technische Umsetzung erfolgt innerhalb einer bestehenden Azure Subscription.)
 
-Ressourcengruppen:
+- **DEV** (Entwicklung)
+- **TEST** (Abnahme / Qualitätssicherung)
+- **PROD** (Produktivbetrieb)
 
-- rg-kmu-prod-networking  
-- rg-kmu-prod-security  
-- rg-kmu-prod-shared  
-- rg-kmu-prod-monitoring  
+Um Kosten zu vermeiden, wird im MVP zunächst nur die **DEV-Umgebung technisch umgesetzt**.  
+TEST und PROD sind **architektonisch identisch** geplant und können später 1:1 repliziert werden (z. B. per Terraform/Bicep).
 
 ---
 
-## Begründung der Struktur
+## Resource Groups je Umgebung (Standard)
+Pro Umgebung werden Resource Groups nach Verantwortungsbereichen getrennt:
 
-Die gewählte Struktur orientiert sich an Best Practices für Cloud-Governance und einer klaren Trennung von Verantwortlichkeiten.
+### DEV
+- rg-kmu-dev-networking
+- rg-kmu-dev-security
+- rg-kmu-dev-shared
+- rg-kmu-dev-monitoring
+
+### TEST
+- rg-kmu-test-networking
+- rg-kmu-test-security
+- rg-kmu-test-shared
+- rg-kmu-test-monitoring
+
+### PROD
+- rg-kmu-prod-networking
+- rg-kmu-prod-security
+- rg-kmu-prod-shared
+- rg-kmu-prod-monitoring
+
+---
 
 ### Networking
 Die Netzwerkressourcen werden in einer eigenen Ressourcengruppe isoliert, um:
