@@ -88,3 +88,9 @@ Storage Accounts unterliegen Azure-Namensregeln:
 Beispiel:
 
 stkmuprodwe001
+
+## Besonderheit: Netzwerkgruppen (Sicherheitsregeln)
+<action>-<source>-<to>-<destination>
+
+Beispiel:
+allow-app-to-data
