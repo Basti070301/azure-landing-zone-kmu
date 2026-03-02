@@ -32,6 +32,10 @@ Es werden folgende Rollen definiert:
 - Einsicht in Konfigurationen und Logs
 - Keine Änderungsrechte
 
+### Network Engineer
+- Verantwortlich für VNet/Subnets, NSGs, Routing (UDR) und Peering
+- Rolle: Network Contributor auf rg-kmu-<env>-networking
+- Keine **Owner**-Rechte
 ---
 
 ## Tagging-Strategie

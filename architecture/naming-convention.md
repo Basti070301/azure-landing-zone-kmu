@@ -77,7 +77,7 @@ Dient zur Unterscheidung mehrerer Ressourcen desselben Typs.
 
 ---
 
-## Besonderheit: Storage Accounts
+# Storage Accounts
 
 Storage Accounts unterliegen Azure-Namensregeln:
 
@@ -94,3 +94,56 @@ stkmuprodwe001
 
 Beispiel:
 allow-app-to-data
+
+
+
+# Namenskonvention für Microsoft Entra Gruppen
+
+## Ziel
+
+- klare und schnelle Zuordnung von Berechtigungen (RBAC)
+- bessere Übersichtlichkeit in Microsoft Entra ID und Azure
+- Skalierbarkeit (mehrere Umgebungen/Teams/Scopes)
+- Automatisierung (z. B. IaC / Terraform / Pipelines)
+- professionelle Governance innerhalb einer Landing Zone
+
+Die Gruppen werden primär für **Azure RBAC** genutzt (Zugriffssteuerung auf Subscription/Resource Groups/Ressourcen).
+
+---
+
+## Allgemeines Benennungsschema
+
+**Schema:**
+
+`grp-<plattform>-<organisation>-<umgebung>-<scope>-<rolle>`
+
+**Beispiele:**
+
+- `grp-az-kmu-dev-networking-contributor`
+- `grp-az-kmu-dev-networking-reader`
+
+## Standardisierte Gruppenbeschreibung
+
+Um Gruppen in Microsoft Entra ID langfristig wartbar zu halten, sollte jede Gruppe eine **einheitliche Beschreibung** erhalten.  
+Dadurch wird sofort klar:
+
+- wofür die Gruppe gedacht ist (Zweck / Scope)
+- für welche Umgebung sie gilt (dev/test/prod)
+- wo die Berechtigung zugewiesen ist (z. B. Resource Group / Subscription)
+- dass Berechtigungen **über Gruppen** und nicht über einzelne Benutzer gesteuert werden sollen
+
+### Beschreibungsvorlage (Template)
+
+**Template:**
+
+`Azure RBAC-Gruppe für <Scope> in <Umgebung>. Rolle: <Rolle>. Zuweisung auf <Ziel-Scope>.`
+
+### Beispiele
+
+- `Azure RBAC-Gruppe für Networking in dev. Rolle: Network Contributor. Zuweisung auf rg-kmu-dev-networking.`
+- `Azure RBAC-Gruppe für Networking in dev. Rolle: Reader. Zuweisung auf rg-kmu-dev-networking.`
+- `Azure RBAC-Gruppe für Platform in prod. Rolle: Contributor. Zuweisung auf Subscription azure-landing-zone-kmu.`
+
+### Hinweis
+
+Berechtigungen sollten **nicht direkt an Benutzer**, sondern ausschließlich an **Gruppen** vergeben werden, um Governance und Nachvollziehbarkeit sicherzustellen.
