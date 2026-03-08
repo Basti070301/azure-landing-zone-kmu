@@ -78,7 +78,6 @@ Dient zur Unterscheidung mehrerer Ressourcen desselben Typs.
 ---
 
 # Storage Accounts
-
 Storage Accounts unterliegen Azure-Namensregeln:
 
 - keine Bindestriche
@@ -86,15 +85,28 @@ Storage Accounts unterliegen Azure-Namensregeln:
 - maximal 24 Zeichen
 
 Beispiel:
-
 stkmuprodwe001
+
+## Container
+<scope>-<zweck>
+
+Beispiel:
+shared-data
+shared-documents
+
+## Geheimnisse (Secrets)
+<scope>-<system/zweck>-<typ>
+
+Beispiel:
+shared-test-secret
+shared-api-token
+shared-salesforce-token
 
 ## Besonderheit: Netzwerkgruppen (Sicherheitsregeln)
 <action>-<source>-<to>-<destination>
 
 Beispiel:
 allow-app-to-data
-
 
 
 # Namenskonvention für Microsoft Entra Gruppen
